@@ -26,7 +26,7 @@ int main(void) {
   FILE *arq;
   char ex;
   registro agenda[100];
-  arq = fopen("agenda.csv", "rt");
+  arq = fopen("agenda.txt", "rt");
   if (arq == NULL) {
     printf("File not found!!");
     getchar();
@@ -42,7 +42,7 @@ int main(void) {
   fclose(arq);
   
 
-  arq = fopen("agenda.csv", "rt");
+  arq = fopen("agenda.txt", "rt");
   for (i = 0; i < lines; i++) {
     fscanf(arq, "%[^;]s", agenda[i].name);
     fgetc(arq);
@@ -54,7 +54,7 @@ int main(void) {
   sort(agenda, lines);
   fclose(arq);
 
-  arq = fopen("agenda-ord.csv", "w");
+  arq = fopen("agenda-ord.txt", "w");
   for (i = 0; i < lines; i++) {
     fprintf(arq, "%s;%i;%s\n", agenda[i].name, agenda[i].cell,agenda[i].twitter);
   }
