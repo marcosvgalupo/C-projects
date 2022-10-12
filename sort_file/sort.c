@@ -41,7 +41,6 @@ int main(void) {
   }
   fclose(arq);
   
-
   arq = fopen("agenda.txt", "rt");
   for (i = 0; i < lines; i++) {
     fscanf(arq, "%[^;]s", agenda[i].name);
