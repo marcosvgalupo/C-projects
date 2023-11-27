@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main(void) {
+int main(void){
+  
   int n, y, cases = 0, greater, smaller, c2, d2, u2, z;
   
   for (n = 123; n <=987; n++) {
